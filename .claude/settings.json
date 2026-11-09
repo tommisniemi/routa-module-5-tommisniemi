@@ -5,6 +5,16 @@
       "Read(~/.routa/**)",
       "Edit(~/.routa/**)",
       "Bash(*.routa*)"
+    ],
+    "ask": [
+      "Bash(npm install:*)",
+      "Bash(npm i:*)",
+      "Bash(npm add:*)",
+      "Bash(yarn install:*)",
+      "Bash(yarn add:*)",
+      "Bash(pnpm install:*)",
+      "Bash(pnpm i:*)",
+      "Bash(pnpm add:*)"
     ]
   },
   "hooks": {
