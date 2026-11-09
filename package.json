@@ -13,6 +13,7 @@
     "baseline:check": "node tools/baseline-check.ts",
     "api": "node tools/api.ts",
     "live-check": "node tools/live-check.ts",
+    "lint": "node tools/lint.ts",
     "test": "node --test \"mcp/test/*.test.ts\""
   }
 }
