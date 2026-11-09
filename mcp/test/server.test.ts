@@ -10,7 +10,7 @@ test("initialize answers with the client's protocol version", async () => {
 
 test("tools/list names every tool", async () => {
   const { tools } = (await answer({ id: 1, method: "tools/list" })) as { tools: { name: string }[] };
-  assert.deepEqual(tools.map((t) => t.name).sort(), ["apply_change", "copy_group_access", "get_settings", "preview_change", "set_session_length", "who_can_reach"]);
+  assert.deepEqual(tools.map((t) => t.name).sort(), ["apply_change", "baseline_differences", "copy_group_access", "get_settings", "preview_change", "set_session_length", "who_can_reach"]);
 });
 
 test("a refused call comes back as a tool error", async () => {

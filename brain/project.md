@@ -14,3 +14,9 @@ Routa's IT configures its identity platform by asking Claude, through this MCP s
 
 - A read-only token never changes a setting.
 - Every change is shown before it is applied, and what is applied is what was shown.
+
+## The baseline
+
+- `client/security-baseline.json` holds the agreed access per group and the 20 policies. `baseline_differences` compares live settings with it, in plain words.
+- It reads with `requireToken` (a read-only token is enough), calls only `getSettings`, and never `patchSettings`. It names what differs and doesn't offer to fix it: fixing goes through preview_change and apply_change.
+- Against the seeded test environment it finds 9 differences (3 groups reaching apps they shouldn't, 2 MFA policies off, session length, legacy sign-in, guest access).
